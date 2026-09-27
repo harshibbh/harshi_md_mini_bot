@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ASHIYA-MD V.4 MINI BOT pair</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing:border-box; margin:0; padding:0 }
+    body {
+      font-family:'Poppins',sans-serif;
+      color:#ffffff;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      padding:20px;
+      animation:fadeIn 2s ease;
+      background-image: url("https://i.ibb.co/93sxdqyd/eab9bb2dae83.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      object-fit: cover;
+      animation: bgMove 12s infinite alternate;
+    }
+    
+   
+    
+
+    @keyframes fadeIn {
+      0% { opacity:0; transform:scale(0.98); }
+      100% { opacity:1; transform:scale(1); }
+    }
+
+    
+    /*.particles span {
+      position:absolute;
+      display:block;
+      width:12px;
+      height:12px;
+      background:radial-gradient(circle,#00FF00,#444);
+      border-radius:50%;
+      opacity:0.5;
+      animation:float 6s linear infinite;
+    }
+
+    @keyframes float {
+      0% { transform:translateY(100vh) scale(0.6); opacity:0; }
+      30% { opacity:1; }
+      100% { transform:translateY(-10vh) scale(1.2); opacity:0; }
+    }*/
+
+    .wrap { position:relative; z-index:2; width:380px; max-width:95%; }
+
+    .box {
+     background: rgba(0,0,0,0.1);
+      
+      backdrop-filter: blur(10px);
+      border: 2px solid #63636385;         
+      border-radius:20px;
+      padding:90px 22px 40px;
+      text-align:center;
+      transition:all .5s ease;
+      animation:boxPop 1.3s ease;
+    }
+
+    @keyframes boxPop {
+      0% { transform:translateY(60px); opacity:0; }
+      100% { transform:translateY(0); opacity:1; }
+    }
+
+     .span {
+        display: inline-block;        
+        width: 15px;                  
+        height: 15px;                
+        background: #00FF00;
+        box-shadow: 0 0 5px #00FF00;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 89%;
+        left: 60%;
+  }
+  
+  
+    .avatar {
+      position:absolute;
+      top:-60px;
+      left:50%;
+      transform:translateX(-50%);
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      overflow:hidden;
+      background: #000000;
+      border: 1px solid #4444445E;
+      box-shadow:
+            inset 4px 4px 10px #050505,
+            inset -4px -4px 10px #1a1a1a,
+            0 10px 25px rgba(0,0,0,1);
+    }
+
+   
+
+    .avatar img { width:100%; height:100%; object-fit:cover; }
+
+    h6 { color:#abc; font-weight:500; margin:6px 0 }
+    
+    h2, h3 {
+      background-image: url(https://files.catbox.moe/umaz3e.jpg);
+      background-clip: text;
+      background-size: 300% 300%;
+      color: transparent;
+      animation:  animation 8s ease infinite;
+     }
+     
+     @keyframes animation {
+  0% {background-position: 0%;}
+  50% {background-position: 100%;}
+  100% {background-position: 0%;}
+}
+     
+
+    .input-container { margin-top:16px; text-align:left; }
+    .input-container input {
+      width:100%;
+      padding:12px 14px;
+      border-radius:10px;
+      border:none;
+      background: rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      outline: none;
+      color:#fff;
+      font-size:15px;
+      font-weight:700;
+      border:1px solid rgba(255,255,255,0.15);
+    }
+
+    .submit-btn {
+      margin-top:14px;
+      width:100%;
+      padding:12px 0;
+      background: #111;
+      box-shadow:
+           4px 4px 10px #050505,
+             inset -4px -4px 10px #1a1a1a,
+            0 10px 25px rgba(0,0,0,1);
+      border: 1px solid #4E4E4E9C;
+      color:#fff;
+      border:none;
+      border-radius:10px;
+      font-weight:700;
+      cursor:pointer;
+      transition: .4s;
+    }
+    .submit-btn:hover {
+      transform:scale(1.04);
+      color: #00FF00;
+      background: #111;
+    }
+
+    .info {
+      margin-top:14px;
+      color:#bbb;
+      font-weight:600;
+    }
+
+    .actions {
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      margin-top:20px;
+    }
+
+    .join-btn {
+      background: #000000;
+      box-shadow:
+           4px 4px 10px #050505,
+             inset -4px -4px 10px #1a1a1a,
+            0 10px 25px rgba(0,0,0,1);
+      border: 1px solid #808080D9;
+      color:#fff;
+      padding:10px 18px;
+      border-radius:12px;
+      font-weight:700;
+      cursor:pointer;
+      border:none;
+      transition:0.25s;
+    }
+
+    .join-btn:hover { color: #00FF00; }
+
+    .ghost-btn {
+      background: #000000;
+      box-shadow:
+           4px 4px 10px #050505,
+             inset -4px -4px 10px #1a1a1a,
+            0 10px 25px rgba(0,0,0,1);
+      border: 1px solid #4E4E4E9C;
+      border:1px solid #fff3;
+      padding:10px 12px;
+      border-radius:10px;
+      color: red;
+      font-weight: 700;
+      cursor:pointer;
+    }
+
+    .ghost-btn:hover { color:#fff; border-color:#fff6; }
+
+    .box.hide { transform:translateY(120px) scale(.95); opacity:0; }
+
+    @media (max-width:420px){
+      .avatar{width:96px;height:96px;top:-48px}
+      .box{padding-top:78px}
+    }
+  </style>
+</head>
+
+<body>
+  <!---<div class="particles" id="particles"></div>--->
+<section class="bg"></section>
+  <div class="wrap">
+    <div class="box" id="mainBox">         
+      <div class="avatar">
+        <img src="https://files.catbox.moe/4jg2v7.jpg" alt="Avatar">          
+      </div>  
+     <span class="span"></span>
+      <h2>WELCOME TO</h2>
+      <h3>ASHIYA-MD V.4 MINI BOT PAIR</h3>
+      <h6>Canet Bot</h6>
+      <h6>ᴇɴᴛᴇʀ ʏᴏᴜʀ ᴡʜᴀᴛꜱᴀᴘᴘ ɴᴜᴍʙᴇʀ ᴡɪᴛʜ ᴄᴏᴜɴᴛʀʏ ᴄᴏᴅᴇ</h6>
+
+      <div class="input-container">
+        <input id="number" type="tel" placeholder="94xxxxxxx" inputmode="numeric" pattern="[0-9]*" />
+      </div>
+      <button id="submit" class="submit-btn">SUBMIT</button>
+      
+     <div class="info" id="pair" style="min-height:28px"></div>
+ 
+      <div class="actions">
+        <button class="join-btn" id="joinBtn">JOIN CHANNEL</button>
+        <button class="ghost-btn" id="clearBtn">CLEAR</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  /*const particlesContainer = document.getElementById('particles');
+  const particlesCount = 70; // number of dots
+
+  for (let i = 0; i < particlesCount; i++) {
+    const span = document.createElement('span');
+    // random position
+    span.style.left = Math.random() * 100 + 'vw';
+    span.style.top = Math.random() * 100 + 'vh';
+    // random size
+    const size = Math.random() * 12 + 4;
+    span.style.width = size + 'px';
+    span.style.height = size + 'px';
+    // random animation duration
+    span.style.animationDuration = (5 + Math.random() * 5) + 's';
+    // random delay
+    span.style.animationDelay = Math.random() * 5 + 's';
+    particlesContainer.appendChild(span);
+  }*/
+
+
+  
+  
+  
+    // submit behavior (same as before but now shows in #pair)
+    const pair = document.getElementById('pair');
+    const submit = document.getElementById('submit');
+    const num = document.getElementById('number');
+
+    submit.addEventListener('click', async (e) => {
+      e.preventDefault();
+      if (!num.value || num.value.replace(/[^0-9]/g,'').length < 11) {
+        pair.innerHTML = '<span style="color:#ffb3b3;font-weight:700">Invalid or missing number</span>';
+        return;
+      }
+      const number = num.value.replace(/[^0-9]/g,'');
+      num.value = '+' + number;
+      num.style.background = '#120000';
+      pair.innerHTML = '<span style="color:#ffdede;font-weight:700">Please wait...</span>';
+      try {
+        let res = await fetch(`/code?number=${number}`);
+        let data = await res.json();
+        let code = data.code || 'Service Unavailable';
+        pair.innerHTML = `<div id="copy" style="color:#ffb3b3;font-weight:700;cursor:pointer" onclick="copyCode()"><strong>CODE:</strong> <span style="color:#fff">${code}</span></div>`;
+      } catch (err) {
+        pair.innerHTML = '<span style="color:orangered;font-weight:700">Error fetching code</span>';
+      }
+    });
+
+    function copyCode(){
+      const el = document.getElementById('copy');
+      if (!el) return;
+      const txt = el.innerText.replace('CODE:','').trim();
+      navigator.clipboard?.writeText(txt).then(()=>{
+        const old = el.innerHTML;
+        el.innerHTML = '<strong style="color:lime">COPIED</strong>';
+        setTimeout(()=> el.innerHTML = old,700);
+      }).catch(()=>{});
+    }
+
+    // clear button
+    document.getElementById('clearBtn').addEventListener('click', ()=> {
+      num.value=''; pair.innerHTML=''; num.type='tel'; num.style.background='';
+    });
+
+    // join button: slide & fade then open link
+    const joinBtn = document.getElementById('joinBtn');
+    const mainBox = document.getElementById('mainBox');
+    const channelURL = "https://whatsapp.com/channel/0029VbBwu4PKbYMMXVN2sN0B";
+
+    joinBtn.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      
+      mainBox.classList.add('hide');
+      // after animation ends, open link
+      setTimeout(()=> {
+        // try open in new tab; fallback to same tab
+        const opened = window.open(channelURL, '_blank', 'noopener,noreferrer');
+        if (!opened) window.location.href = channelURL;
+      }, 450);
+    });
+
+    // optional: allow pressing Enter on input to submit
+    num.addEventListener('keydown', (e)=> {
+      if (e.key === 'Enter') submit.click();
+    });
+  </script>
+</body>
+  </html>
